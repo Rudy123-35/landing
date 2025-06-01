@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASAA - Aesthetic Surgery AI Agency</title>
+  <style>
+    :root {
+      --background: #f3dccb;
+      --black: #000;
+      --white: #fff;
+      --font-heading: 'Georgia', serif;
+      --font-body: 'Helvetica Neue', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--background);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background-color: var(--background);
+    }
+
+    header img {
+      width: 160px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    p.lead {
+      font-size: 1.25rem;
+      max-width: 640px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 16px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #222;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-group {
+      background: #fff8f2;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .feature-group h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      font-family: var(--font-heading);
+    }
+
+    .feature-group ul {
+      padding-left: 20px;
+    }
+
+    .feature-group li {
+      margin-bottom: 10px;
+    }
+
+    #schedule {
+      text-align: center;
+      background: #fff3e6;
+      padding: 60px 20px;
+    }
+
+    #schedule p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 1.1rem;
+    }
+
+    .schedule-button {
+      display: inline-block;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 14px 26px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .schedule-button:hover {
+      background-color: #222;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #555;
+      background: #f6e7db;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="ASAA.png" alt="ASAA Logo" />
+    <h1>Never worry about empty appointment slots again.</h1>
+    <p class="lead">Let our AI and team bring you a steady stream of clients.</p>
+    <a href="#schedule" class="cta-button">Schedule a Free Consultation</a>
+  </header>
+
+  <section>
+    <h2>What We Do</h2>
+    <div class="features">
+      <div class="feature-group">
+        <h3>AI Bot for Booking & Client Interaction</h3>
+        <ul>
+          <li>Custom AI bots to answer FAQs and book appointments 24/7.</li>
+          <li>Reduce manual work and respond instantly.</li>
+        </ul>
+      </div>
+
+      <div class="feature-group">
+        <h3>Website Creation or Modernization</h3>
+        <ul>
+          <li>No site? We build one from scratch with AI integrated.</li>
+          <li>Have a site? We redesign and embed our AI solution.</li>
+        </ul>
+      </div>
+
+      <div class="feature-group">
+        <h3>Continuous Optimization</h3>
+        <ul>
+          <li>We optimize monthly to keep up with changing trends.</li>
+          <li>Hosting and support included with all packages.</li>
+        </ul>
+      </div>
+
+      <div class="feature-group">
+        <h3>Fast, Flexible Updates</h3>
+        <ul>
+          <li>Need to promote a new offer? We update the bot instantly.</li>
+        </ul>
+      </div>
+
+      <div class="feature-group">
+        <h3>Booking Integration</h3>
+        <ul>
+          <li>Integrated with Calendly or your system to schedule directly.</li>
+        </ul>
+      </div>
+
+      <div class="feature-group">
+        <h3>Real Results</h3>
+        <ul>
+          <li>We don’t just fill your calendar — we fill it with reviews.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <h2>Ready to Fill Your Calendar?</h2>
+    <p>Book a strategy call now to see how we can automate your clinic and deliver consistent results with AI.</p>
+    <a href="https://calendly.com/your-link" class="schedule-button" target="_blank">Book a Call Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 ASAA - Aesthetic Surgery AI Agency. All rights reserved.
+  </footer>
+</body>
+</html>
