@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ASAA - Aesthetic Surgery AI Agency</title>
 
   <!-- Google Translate Script -->
@@ -10,9 +11,18 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        includedLanguages: 'en,es,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
       }, 'google_translate_element');
+    }
+
+    function changeLanguage(lang) {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+      }
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -39,16 +49,36 @@
       line-height: 1.6;
     }
 
-    #translate-widget {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+    /* Modern language switcher */
+    #language-selector {
+      position: fixed;
+      top: 15px;
+      right: 15px;
       z-index: 9999;
+      background-color: #fff8f2;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 10px;
+      padding: 6px 12px;
       font-size: 0.9rem;
-      background: #fff8f2;
-      border-radius: 6px;
-      padding: 5px 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #language-selector button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    #language-selector button:hover {
+      color: #000;
+    }
+
+    #google_translate_element {
+      display: none;
     }
 
     header {
@@ -170,9 +200,14 @@
   </style>
 </head>
 <body>
-  <!-- Botón de traducción -->
-  <div id="translate-widget">
-    <div id="google_translate_element"></div>
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element"></div>
+
+  <!-- Modern Language Selector -->
+  <div id="language-selector">
+    <button onclick="changeLanguage('en')">EN</button>
+    <button onclick="changeLanguage('es')">ES</button>
+    <button onclick="changeLanguage('fr')">FR</button>
   </div>
 
   <header>
